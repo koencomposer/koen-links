@@ -7,7 +7,7 @@
     },
     {
       "source": "/join",
-      "destination": "https://google.com",
+      "destination": "https://docs.google.com/forms/d/e/1FAIpQLSeeUaerVOzU2h-SOSUCY_Xo-KlfM5tSbEVK1DtPHr-9o5E9gQ/viewform?usp=dialog",
       "permanent": false
     }
   ]
