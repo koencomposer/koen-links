@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+import { NextResponse } from "next/server";
 
 const redirects: Record<string, string> = {
   join: "https://google.com",
@@ -7,14 +7,13 @@ const redirects: Record<string, string> = {
 
 export async function GET(
   request: Request,
-  context: { params: Promise<{ slug: string }> }
+  { params }: { params: { slug: string } }
 ) {
-  const params = await context.params;
   const destination = redirects[params.slug];
 
   if (!destination) {
-    return new Response("Not found", { status: 404 });
+    return NextResponse.json({ error: "Not found", slug: params.slug }, { status: 404 });
   }
 
-  redirect(destination);
+  return NextResponse.redirect(destination, 307);
 }
