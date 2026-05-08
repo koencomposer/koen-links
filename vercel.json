@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/free",
+      "destination": "https://skool.com/piano",
+      "permanent": false
+    },
+    {
+      "source": "/join",
+      "destination": "https://google.com",
+      "permanent": false
+    }
+  ]
+}
